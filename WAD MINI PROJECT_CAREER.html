@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Specific Career Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    img
+    {
+      position: relative;
+      height: 5%;
+      width: 20%;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      display: grid;
+      grid-template-rows: 1fr 3fr 1fr;
+      height: 100vh;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      text-align: center;
+      background-color: #ddd;
+      padding: 0px;
+    }
+
+    article {
+      display: none;
+      padding: 20px;
+    }
+
+        /* Add background color for each article */
+    article#core {
+      background: #967bb6; /* Replace with your desired background color */
+      color: #fff; /* Set text color to white or another suitable color for visibility */
+    }
+
+    article#ds {
+      background: #967bb6; /* Replace with your desired background color */
+      color: #fff;
+    }
+
+    article#aiml {
+      background: #967bb6; /* Replace with your desired background color */
+      color: #fff;
+    }
+
+    article#iot {
+      background: #967bb6; /* Replace with your desired background color */
+      color: #fff;
+    }
+
+    article#cs {
+      background: #967bb6; /* Replace with your desired background color */
+      color: #fff;
+    }
+
+    /* Adjust text color for better visibility on background colors */
+    article p, article ul {
+      color: #000; /* Set text color to black or another suitable color for visibility */
+    }
+
+
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button.active {
+      font-weight: bold;
+      background-color: #67729D;
+      color: #fff;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked ~ article {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images.jpg"> 
+    <h1>Course Specific Career Options</h1>
+  </header>
+
+  <main>
+    <nav>
+      <button class="course-button" data-target="core">CSE-Core</button>
+      <button class="course-button" data-target="ds">CSE-DS</button>
+      <button class="course-button" data-target="aiml">CSE-AIML</button>
+      <button class="course-button" data-target="iot">CSE-IoT</button>
+      <button class="course-button" data-target="cs">CSE-CS</button>
+    </nav>
+
+    <article id="core">
+      <p>Students who enroll in the B.Tech Computer Science and Engineering programme will have access to a wide range of career opportunities. The rapid world of technological progress has its doors open to computer science experts. Career options include:</p>
+      <ul>
+        <li>Software Developer</li>
+        <li>Game Developer</li>
+        <li>Database Administrator</li>
+        <li>Network Engineer</li>
+        <li>Data Analyst</li>
+        <li>Testing Engineer</li>
+        <li>Systems Analyst</li>
+      </ul>
+    </article>
+
+    <article id="ds">
+      <p>Students who enroll in the B.Tech. Computer Science and Engineering (Data Science) programme will open a world of opportunities for themselves in this world driven by data-based innovations. Career options include:</p>
+      <ul>
+        <li>Data Scientist</li>
+        <li>Data Analyst</li>
+        <li>Business Analyst</li>
+        <li>Data Engineer</li>
+        <li>Product Manager</li>
+        <li>Lead Data Scientist</li>
+      </ul>
+    </article>
+
+    <article id="aiml">
+      <p>Students who enroll in the B.Tech. Computer Science and Engineering (Artificial Intelligence and Machine Learning) programme will assist graduates in developing a comprehensive understanding of the field, preparing them for a wide range of opportunities. Career options include:</p>
+      <ul>
+        <li>Software Engineer</li>
+        <li>Software Tester</li>
+        <li>Application Developer</li>
+        <li>Information and Multimedia Designer</li>
+        <li>Medical Information Scientist</li>
+        <li>Technology Developer</li>
+        <li>IT Specialist</li>
+      </ul>
+
+    </article>
+
+    <article id="iot">
+      <p>Students who enroll in the B.Tech. Computer Science and Engineering (Internet of Things - IoT) programme will be equipped to thrive in the interconnected world of IoT. Career options include:</p>
+      <ul>
+        <li>IOT Solutions Architect</li>
+        <li>IOT System Developer</li>
+        <li>IOT Embedded Systems Engineer</li>
+        <li>IOT Security Consultant</li>
+        <li>IOT Network Analyst</li>
+        <li>IOT Data Scientist</li>
+      </ul>
+    </article>
+
+    <article id="cs">
+      <p>Students who enroll in the B.Tech. Computer Science and Engineering (Cyber Security) programme will become a part of the emerging cybersecurity workforce. Career options include:</p>
+      <ul>
+        <li>Cyber Security Manager</li>
+        <li>Security Specialist</li>
+        <li>Security Analyst and Engineer</li>
+        <li>Security Architect</li>
+        <li>Forensic Expert</li>
+        <li>Penetration Tester</li>
+      </ul>
+    </article>
+
+    <footer>
+      <p><marquee>All Rights Reserved &copy <blink> contact us here llankala2@gitam.in</blink></marquee>
+        <img src="gitam.jpg" alt="school of technology" width="1500" height="1200"</p>
+      <p>* * *</p>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.course-button');
+      const articles = document.querySelectorAll('article');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const target = button.getAttribute('data-target');
+          articles.forEach(article => {
+            article.style.display = (article.id === target) ? 'block' : 'none';
+          });
+          buttons.forEach(b => b.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
